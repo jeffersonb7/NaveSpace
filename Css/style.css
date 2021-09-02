@@ -3,7 +3,10 @@ body, ul, li, p{
     padding: 0px;
     list-style: none;
     font-size: 1.2rem;
-    font-family: Ariel;
+    font-family: Roboto;
+}
+#logo a{
+    font-family: Ubuntu;
 }
 a{
     text-decoration: none;
@@ -17,7 +20,8 @@ a:hover{
     margin-left: 5px;
 }
 .header{
-    background: black;
+    /*background: #A9A3A3;*/
+    background:black;
     display: flex;
     justify-content: space-between;
     padding: 20px;
@@ -46,6 +50,10 @@ img{
 #btn-mobile{
     display: none;
 }
+.iconessociais{
+    display: none;
+
+}
 @media (max-width: 830px) {
     
     #menu{
@@ -54,16 +62,19 @@ img{
         width: 100%;
         top: 70px;
         right: 0px;
-        background: black;
+        /*background:#A9A3A3;*/
+        background:black;
         height: 0vh;
         transition: .6s;
         z-index: 1000;
         visibility: hidden;
         overflow-y: hidden;
     }
-    
+    #logo a{
+        visibility: hidden;
+    }
     #nav.active #menu{
-        height: 50vh;
+        height: 70vh;
         visibility: visible;
         overflow-y: auto;
     }
@@ -104,7 +115,33 @@ img{
         transform: rotate(-135deg);
         top: -7px
     }
-
-
-
+    .iconessociais{
+        display: flex;
+        visibility: visible;
+        display: flex;
+        padding: 0px;
+        text-align: center;
+    }
+    #menu .iconessociais{
+        display: inline-block;
+        margin: 0px;
+        padding: 0px;
+        justify-content: space-between;
+        text-align: center;
+        
+    }
+    #menu .iconessociais a{
+      
+        padding: 20px;
+        display: block;
+    }
+    #menu .iconessociais a img{
+        width: 40px;
+    }
+    #divicones{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
 }
