@@ -1,0 +1,110 @@
+body, ul, li, p{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: Ariel;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    background: rgba(179, 179, 179, 0.356);
+}
+#logo a{
+    font-size: 1.5rem;
+    margin-left: 5px;
+}
+.header{
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#menu{
+    display: flex;
+}
+#menu li{
+    margin-left: 10px;
+}
+#menu li a{
+    display: block;
+    padding: 10px;
+}
+img{
+    width: 50px;
+    height: auto;
+}
+.header div{
+    display: flex;
+    align-items: center;
+}
+
+#btn-mobile{
+    display: none;
+}
+@media (max-width: 830px) {
+    
+    #menu{
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        right: 0px;
+        background: black;
+        height: 0vh;
+        transition: .6s;
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+    
+    #nav.active #menu{
+        height: 50vh;
+        visibility: visible;
+        overflow-y: auto;
+    }
+    #menu li a{
+        padding: 1rem 30%;
+        text-align: center;
+    }
+    #btn-mobile{
+        display: flex;
+        padding: .5rem 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        color: white;
+    }
+    #iconemenu{
+        width: 20px;
+        border-top: 2px solid;
+        display: block;
+    }
+    #iconemenu::after, #iconemenu::before {
+        content: '';
+        margin-top: 5px;
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        transition: .3s;
+        position: relative;
+    }
+    #nav.active #iconemenu{
+        border-top-color: transparent;
+    }
+    #nav.active #iconemenu::before{
+        transform: rotate(135deg);
+    }
+    #nav.active #iconemenu::after{
+        transform: rotate(-135deg);
+        top: -7px
+    }
+
+
+
+}
