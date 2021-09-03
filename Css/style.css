@@ -145,26 +145,40 @@ img{
         align-items: center;
     }
 }
-qs{
-    
-    
+section{
     text-align: center;
     font: size 14px;
     font-family:Ubuntu;
-
+    border: red solid;
 }
-b{
+#PredioEtexto > div{
+    display: flex;
+    margin: 10px;
+}
+#astro{
+    border: red solid;
+    height: 150px;
     border-radius: 50% ;
-    display: block;
     margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
-    width: 30%;
+    width:auto;
+    
 }
-p{background-color:  #2D2D30;
+#fotopredio{
+    border: red solid;
+    border-radius: 5% ;
     height: 500px;
     width: auto;
-    border-radius: 10px;
+    display:flex;
+    margin-left: 30px;
+    margin-right: auto;
+}
+p{
+    background-color:  #2D2D30;
+    height: auto;
+    width: 500px;
+    border-radius: 5px;
     color: white;
     text-align: justify;
      font-size: 24px;   
@@ -172,8 +186,8 @@ p{background-color:  #2D2D30;
    padding-left: 15px;
    padding-right: 15px;
    padding-bottom: 20px;
-    margin-left:  150px; 
-    margin-right: 950px;
+    margin-left:  395px; 
+    margin-right: 5px;
     margin-bottom:50px ;
     font-family:  Ubuntu;
 }
