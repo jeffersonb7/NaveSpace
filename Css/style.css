@@ -146,10 +146,12 @@ img{
     }
 }
 qs{
-    background-color: black;
+    
+    
     text-align: center;
     font: size 14px;
     font-family:Ubuntu;
+
 }
 b{
     border-radius: 50% ;
@@ -164,7 +166,7 @@ p{background-color:  #2D2D30;
     width: auto;
     border-radius: 10px;
     color: white;
-    text-align: left;
+    text-align: justify;
      font-size: 24px;   
     padding-top: 20px ;
    padding-left: 15px;
@@ -172,5 +174,6 @@ p{background-color:  #2D2D30;
    padding-bottom: 20px;
     margin-left:  150px; 
     margin-right: 950px;
+    margin-bottom:50px ;
     font-family:  Ubuntu;
 }
