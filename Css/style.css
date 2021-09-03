@@ -1,4 +1,4 @@
-body, ul, li, p{
+body, ul, li{
     margin: 0px;
     padding: 0px;
     list-style: none;
@@ -7,6 +7,8 @@ body, ul, li, p{
 }
 #logo a{
     font-family: Ubuntu;
+    font-size: 1.5rem;
+    margin-left: 5px;
 }
 a{
     text-decoration: none;
@@ -14,10 +16,6 @@ a{
 }
 a:hover{
     background: rgba(179, 179, 179, 0.356);
-}
-#logo a{
-    font-size: 1.5rem;
-    margin-left: 5px;
 }
 .header{
     /*background: #A9A3A3;*/
@@ -27,6 +25,10 @@ a:hover{
     padding: 20px;
     align-items: center;
     flex-wrap: wrap;
+}
+.header div{
+    display: flex;
+    align-items: center;
 }
 #menu{
     display: flex;
@@ -42,20 +44,14 @@ img{
     width: 50px;
     height: auto;
 }
-.header div{
-    display: flex;
-    align-items: center;
-}
 
-#btn-mobile{
+#botaomobile{
     display: none;
 }
 .iconessociais{
     display: none;
-
 }
 @media (max-width: 830px) {
-    
     #menu{
         display: block;
         position: absolute;
@@ -65,7 +61,7 @@ img{
         /*background:#A9A3A3;*/
         background:black;
         height: 0vh;
-        transition: .6s;
+        transition: .7s;
         z-index: 1000;
         visibility: hidden;
         overflow-y: hidden;
@@ -82,7 +78,7 @@ img{
         padding: 1rem 30%;
         text-align: center;
     }
-    #btn-mobile{
+    #botaomobile{
         display: flex;
         padding: .5rem 1rem;
         border: none;
@@ -120,28 +116,19 @@ img{
         visibility: visible;
         display: flex;
         padding: 0px;
-        text-align: center;
     }
     #menu .iconessociais{
-        display: inline-block;
-        margin: 0px;
-        padding: 0px;
         justify-content: space-between;
-        text-align: center;
-        
     }
     #menu .iconessociais a{
-      
         padding: 20px;
-        display: block;
     }
     #menu .iconessociais a img{
-        width: 40px;
+        width: 30px;
+        height: auto;
     }
     #divicones{
         display: flex;
-        width: 100%;
         justify-content: center;
-        align-items: center;
     }
 }

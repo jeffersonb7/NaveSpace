@@ -1,4 +1,4 @@
-const btnMobile = document.getElementById('btn-mobile');
+const btnMobile = document.getElementById('botaomobile');
 
 function toggleMenu(event){
     if(event.type === 'touchstart') event.preventDefault();
