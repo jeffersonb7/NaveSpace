@@ -1,0 +1,19 @@
+@media(max-width: 830px){
+    p{
+        /*background-color:  #2D2D30;*/
+        height: auto;
+        /*width: 500px;*/
+        border-radius: 1%;
+        color: white;
+        text-align: justify;
+         font-size: 24px;   
+         font-family:  Ubuntu;
+         padding: 3rem;
+        /*padding-top: 20px ;
+       padding-left: 15px;
+       padding-right: 15px;
+       padding-bottom: 20px;*/
+        margin: 0px;
+    }
+
+}

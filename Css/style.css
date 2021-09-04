@@ -141,79 +141,30 @@ img{
     text-align: center;
     font: size 14px;
     font-family:Ubuntu;
-    /*border: red solid;*/
 }
 #PredioEtexto > div{
     display: flex;
-    /*margin: 10px;*/
 }
 #astro{
-    /*border: red solid;*/
     height: 150px;
-    border-radius: 50% ;
-    /*margin-top: 100px;*/
+    border-radius: 50% ;   
     margin-left: auto;
     margin-right: auto;
     width:auto;
     
 }
 #fotopredio{
-    /*border: red solid;*/
-    /*border-radius: 1% ;*/
     width: 100%;
     min-height: 480px;
-    /*max-height: 100%;*/
-
-    /*width: auto;*/
-    /*display:flex;
-    margin-left: 30px;
-    margin-right: auto;*/
 }
 p{
-    /*background-color:  #2D2D30;*/
     height: auto;
-    /*width: 500px;*/
     border-radius: 1%;
     color: white;
     text-align: justify;
      font-size: 24px;   
      font-family:  Ubuntu;
      padding: 3rem;
-    /*padding-top: 20px ;
-   padding-left: 15px;
-   padding-right: 15px;
-   padding-bottom: 20px;*/
-    /*margin-left:  395px;
-    margin-right: 5px;
-    margin-bottom:50px ;*/ 
-    margin: 0px;
-}
-#Serviços1>div{
-    background-color: black;
-    color: white;
-    text-align: center;
-    justify-content: center;
-    margin-top: 100px;
-    display: flex;
-    font-size: 1.6rem;
-    font-family: Ubuntu;
-}
-.ListaS{
-   color: white;
-   padding-left: 40px;
-   text-align: left;
-    margin-top: 20px;
-    margin-left: 400px;
-    background-color: #2D2D30;
-    border-radius: 5%;
-    height: 380px;
-    width: 600px;
-}
-.ListaS1{
-    margin-top: 10px;
-    list-style-type: circle;
-    font-size: 36px;
-    padding-top: 25px;
 }
 #div-predioEtexto-text{
     width: 50%;
@@ -229,12 +180,100 @@ p{
     background: #2D2D30;;
 }
 #div-predioEtexto-text{
-    margin-right: 1rem;
+    margin-right: 5%;
 }
 #div-predioEtexto-img{
-    margin-left: 1rem;
+    margin-left: 5%;
 }
 #h-quemsomos{
     color: white;
     font-size: 36px;
 }
+/*Responsividade Quem somos*/
+@media(max-width: 830px){
+    p{
+        justify-content: center;
+        height: auto;
+        border-radius: 1%;
+        color: white;
+        text-align: justify;
+         font-size: 24px;   
+         font-family:  Ubuntu;
+         padding: 2%;
+         width: auto;
+    }
+    #div-predioEtexto-text{
+        width: auto;
+    }
+    #div-predioEtexto-contenner{
+        margin: 5%;
+        max-height: 20%;
+    }
+    #div-predioEtexto-img{
+        width: 0%;
+        height: 0%;
+    }
+    #div-predioEtexto-text{
+        margin-right: 2%;
+    }
+
+}
+/*Fim Responsividade Quem somos*/
+
+#Serviços1>div{
+    background-color: black;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    margin-top: 100px;
+    display: flex;
+    font-size: 1.6rem;
+    font-family: Ubuntu;
+}
+.ListaS{
+   color: white;
+   padding-left: 40px;
+   text-align: left;
+    margin-top: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    background-color: #2D2D30;
+    border-radius: 5%;
+    height: 380px;
+    width: auto;
+}
+.ListaS1{
+    margin-top: 10px;
+    list-style-type: circle;
+    font-size: 36px;
+    padding-top: 25px;
+}
+/*Responsividade Serviços*/
+@media(max-width: 830px){
+    #Serviços1>div{
+        background-color: rgb(0, 0, 0);
+        color: white;
+        text-align: center;
+        justify-content: center;
+        margin-top: 100px;
+        display: flex;
+        font-size: 1.6rem;
+        font-family: Ubuntu;
+        
+    }
+    .ListaS{
+        color: white;
+        padding-left: 40px;
+        text-align: left;
+         margin-top: 20px;
+         margin-left: 10%;
+         background-color: #2D2D30;
+         border-radius: 5%;
+         height: auto;
+         width: auto;
+         justify-content: center;
+         
+     }
+}
+/*Fim Teste*/
