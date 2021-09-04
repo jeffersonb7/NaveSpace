@@ -5,6 +5,9 @@ body, ul, li{
     font-size: 1.2rem;
     font-family: Roboto;
 }
+body{
+    background: black;
+}
 #logo a{
     font-family: Ubuntu;
     font-size: 1.5rem;
@@ -19,7 +22,7 @@ a:hover{
 }
 .header{
     /*background: #A9A3A3;*/
-    background:black;
+    background:rgba(45, 45, 48, 0.9);
     display: flex;
     justify-content: space-between;
     padding: 20px;
@@ -56,10 +59,10 @@ img{
         display: block;
         position: absolute;
         width: 100%;
-        top: 70px;
+        top: 90px;
         right: 0px;
         /*background:#A9A3A3;*/
-        background:black;
+        background:rgba(45, 45, 48, 0.9);
         height: 0vh;
         transition: .7s;
         z-index: 1000;
@@ -131,4 +134,36 @@ img{
         display: flex;
         justify-content: center;
     }
+}
+qs{
+    
+    
+    text-align: center;
+    font: size 14px;
+    font-family:Ubuntu;
+
+}
+b{
+    border-radius: 50% ;
+    display: block;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+p{background-color:  #2D2D30;
+    height: 500px;
+    width: auto;
+    border-radius: 10px;
+    color: white;
+    text-align: justify;
+     font-size: 24px;   
+    padding-top: 20px ;
+   padding-left: 15px;
+   padding-right: 15px;
+   padding-bottom: 20px;
+    margin-left:  150px; 
+    margin-right: 950px;
+    margin-bottom:50px ;
+    font-family:  Ubuntu;
 }

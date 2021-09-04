@@ -1,0 +1,109 @@
+#section-home{
+    background-image: url(../Imagens/Moon.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    height: 45rem;
+}
+#div-section-home{
+    width: 100%;
+    z-index: 1000;
+    
+}
+#div-section-home h1{
+    color: white;
+    margin: 0px;
+    padding: 0%;
+    font-size: 36px;
+    margin-bottom: 20px;
+    margin-left:10px;
+}
+#div-section-home p{
+    margin: 0%;
+    padding: 0%;
+    background: none;
+    height: 100%;
+    border-radius: 0%;
+    font-size: 24px;
+    margin-left: 20px;
+}
+#div-section-home > div{
+    margin: 10px;
+    width: 50%;
+    padding-top: 13%;
+    margin-left: 100px; 
+}
+#div-button{
+    margin-top: 30px;
+    display: block;
+}
+.botao{
+    font-family: ubuntu;
+    border-radius: 20px;
+    background: #464648;
+    text-align: center;
+    width: 13rem;
+    color: white;
+    border-style: none;
+    height: 3rem;
+    font-size: 20px;
+    display: block;
+    float: right;
+}
+#redessociais{
+    display: block;
+    height: 100px;
+    margin-top: 6rem;
+    padding-left: 3rem;
+}
+#redessociais img{
+    margin:10px;
+    width: 40px;
+}
+
+
+
+@media (max-width:830px){
+    #div-section-home > div {
+        text-align: center;
+        margin-top: 10px;
+        background:rgba(45, 45, 48, 0.9);
+        padding: 10%;
+        margin: 10%;
+        width: 60%;
+        
+    }
+
+    #section-home{
+        background: black;
+    }
+    #div-section-home p{
+        margin: 0px;
+        padding: 10px;
+    }
+    #div-section-home h1{
+        margin: 0px;
+        padding-bottom: 5%;
+        padding: 10px;
+        font-size: 24px;
+    }
+    #div-button{
+        text-align: center;
+        margin-top: 10%;
+        margin-right: 0%;
+    }
+    .botao{
+        float: none;
+    }
+    #div-section-home p{
+        font-size: 18px;
+    }
+    .botao{
+        width: 11rem;
+        display: inline-block;
+    }
+    #redessociais{
+        display: none;
+    }
+
+}
