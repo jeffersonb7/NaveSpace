@@ -7,6 +7,7 @@
     <title>NaveSpace</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/stylehome.css">
+    <link rel="stylesheet" href="/css/styleportfolio.css">
 </head>
 <body>
     <header class="header">
@@ -33,31 +34,39 @@
         </nav>
     </header>
 
-
+    
+<!--Começo da seção home-->
 
     <section id="section-home">
         <div id="div-section-home">
-            <div>
-            <h1>Que tal conhecer um pouco da NaveSpace?</h1>
-            <p>A NaveSpace é  uma loja de
-                artigos temáticos sobre o espaço, 
-                nosso objetivo é tematizar seu ambiente 
-                e te deixar o mais perto da lua possível!<br>
-                Para conferir os produtos que temos disponível
-                em estoque, basta clicar no botão abaixo, ou se
-                quiser pode continuar navegando e conhecendo 
-                um pouco mais sobre a empresa.</p>
-                <div id="div-button">
-                <button class="botao">Loja NaveSpace</button>
+            <div class="espaco"></div>
+            <div id="div-conteudo">
+              <div id="flex">
+                <h1>Que tal conhecer um pouco da NaveSpace?</h1>
+                    <p>A NaveSpace é  uma loja de
+                    artigos temáticos sobre o espaço, 
+                    nosso objetivo é tematizar seu ambiente 
+                    e te deixar o mais perto da lua possível!<br>
+                    Para conferir os produtos que temos disponível
+                    em estoque, basta clicar no botão abaixo, ou se
+                    quiser pode continuar navegando e conhecendo 
+                    um pouco mais sobre a empresa.</p>
+                    <div id="div-button">
+                    <button class="botao">Loja NaveSpace</button>
+                    </div>  
                 </div>
-                <div id="redessociais">
-                    <a><img  src="./Imagens/insta.png"></a>
-                    <a><img  src="./Imagens/facebook.png"></a>
-                    <a><img  src="./Imagens/twitter.png"></a>
-                </div>
+                <div id="flex2"></div> 
             </div>
+            <div id="redessociais">
+                <a><img  src="./Imagens/insta.png"></a>
+                <a><img  src="./Imagens/facebook.png"></a>
+                <a><img  src="./Imagens/twitter.png"></a>
+            </div>
+            <div class="espaco"></div>
         </div>
     </section>
+    <!--Fim da seção home-->
+
     <section id="section-quemsomos"> <!-- Início Seção Quem Somos -->
      <div>
       
@@ -68,6 +77,9 @@
     </section>
     
     <section id="PredioEtexto">  
+<!-- Criei essa div para habilitar o display flex
+A div envolve o texto e a foto -->
+    
        <div id="div-predioEtexto-contenner">
             
             <div id="div-predioEtexto-text">
@@ -108,7 +120,12 @@
         </div>
     </section> <!--Fim Seção Serviços-->
 
+    <!--Começo da seção portfólio-->
+    
+    <!--Fim da seção portfólio-->
+    
 
-    <script src="./Js/menuresp.js"></script>
+<script src="./Js/menuresp.js"></script>
+<script src="./Js/carousel.js"></script>
 </body>
 </html>
