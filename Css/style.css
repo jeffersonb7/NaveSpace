@@ -5,6 +5,7 @@ body, ul, li{
     font-size: 1.2rem;
     font-family: Roboto;
 }
+
 body{
     background: black;
 }
@@ -134,36 +135,106 @@ img{
         display: flex;
         justify-content: center;
     }
+    
 }
-qs{
-    
-    
+#section-quemsomos{
     text-align: center;
     font: size 14px;
     font-family:Ubuntu;
-
+    /*border: red solid;*/
 }
-b{
+#PredioEtexto > div{
+    display: flex;
+    /*margin: 10px;*/
+}
+#astro{
+    /*border: red solid;*/
+    height: 150px;
     border-radius: 50% ;
-    display: block;
-    margin-top: 100px;
+    /*margin-top: 100px;*/
     margin-left: auto;
     margin-right: auto;
-    width: 30%;
+    width:auto;
+    
 }
-p{background-color:  #2D2D30;
-    height: 500px;
-    width: auto;
-    border-radius: 10px;
+#fotopredio{
+    /*border: red solid;*/
+    /*border-radius: 1% ;*/
+    width: 100%;
+    min-height: 480px;
+    /*max-height: 100%;*/
+
+    /*width: auto;*/
+    /*display:flex;
+    margin-left: 30px;
+    margin-right: auto;*/
+}
+p{
+    /*background-color:  #2D2D30;*/
+    height: auto;
+    /*width: 500px;*/
+    border-radius: 1%;
     color: white;
     text-align: justify;
      font-size: 24px;   
-    padding-top: 20px ;
+     font-family:  Ubuntu;
+     padding: 3rem;
+    /*padding-top: 20px ;
    padding-left: 15px;
    padding-right: 15px;
-   padding-bottom: 20px;
-    margin-left:  150px; 
-    margin-right: 950px;
-    margin-bottom:50px ;
-    font-family:  Ubuntu;
+   padding-bottom: 20px;*/
+    /*margin-left:  395px;
+    margin-right: 5px;
+    margin-bottom:50px ;*/ 
+    margin: 0px;
+}
+#Serviços1>div{
+    background-color: black;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    margin-top: 100px;
+    display: flex;
+    font-size: 1.6rem;
+    font-family: Ubuntu;
+}
+.ListaS{
+   color: white;
+   padding-left: 40px;
+   text-align: left;
+    margin-top: 20px;
+    margin-left: 400px;
+    background-color: #2D2D30;
+    border-radius: 5%;
+    height: 380px;
+    width: 600px;
+}
+.ListaS1{
+    margin-top: 10px;
+    list-style-type: circle;
+    font-size: 36px;
+    padding-top: 25px;
+}
+#div-predioEtexto-text{
+    width: 50%;
+}
+#div-predioEtexto-img{
+    width: 50%;
+}
+#div-predioEtexto-contenner{
+    margin: 7rem;
+    max-height: 20%;
+}
+#div-predioEtexto-text{
+    background: #2D2D30;;
+}
+#div-predioEtexto-text{
+    margin-right: 1rem;
+}
+#div-predioEtexto-img{
+    margin-left: 1rem;
+}
+#h-quemsomos{
+    color: white;
+    font-size: 36px;
 }

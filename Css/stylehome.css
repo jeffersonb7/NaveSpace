@@ -26,6 +26,7 @@
     border-radius: 0%;
     font-size: 24px;
     margin-left: 20px;
+    width: 100%;
 }
 #div-section-home > div{
     margin: 10px;
@@ -76,6 +77,8 @@
 
     #section-home{
         background: black;
+        height: 70%;
+       
     }
     #div-section-home p{
         margin: 0px;
