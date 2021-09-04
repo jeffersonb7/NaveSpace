@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class SiteInstitucionalConfig(AppConfig):
-    name = 'site_institucional'
+    name = 'app.site_institucional'
