@@ -44,7 +44,7 @@ a:hover{
     display: block;
     padding: 10px;
 }
-img{
+#logo img{
     width: 50px;
     height: auto;
 }
@@ -162,7 +162,7 @@ p{
     border-radius: 1%;
     color: white;
     text-align: justify;
-     font-size: 24px;   
+     /*font-size: 24px;*/   
      font-family:  Ubuntu;
      padding: 3rem;
 }
