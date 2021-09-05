@@ -9,3 +9,12 @@ function toggleMenu(event){
 btnMobile.addEventListener('click', toggleMenu);
 //para deixar a abertura da nav mais rápida
 btnMobile.addEventListener('touchstart', toggleMenu);
+
+
+
+btnMobile.addEventListener('click', toggleMenu);
+const btnhome = document.getElementById('construcao');
+
+function togglePopup(){
+    alert('Página ainda em desenvolvimento');
+}
