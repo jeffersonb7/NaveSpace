@@ -4,11 +4,7 @@
     width: 100%;
     justify-content: center;
 }
-#div-section-depoimentos h1{
-    color: white;
-    align-items: center;
-    margin: 0px;
-}
+
 #div-geral{
     display: block;
     margin-top: 5%;
@@ -32,6 +28,7 @@
 .div-texto p{
     padding: 0%;
     margin: 0%;
+    font-size: 20px;
 }
 .div-modulo{    
     display: flex;

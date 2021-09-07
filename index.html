@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="/css/stylehome.css">
     <link rel="stylesheet" href="/css/styleportfolio.css">
     <link rel="stylesheet" href="/css/stylecontatos.css">
+    <link rel="stylesheet" href="/css/styleform.css">
+    <link rel="stylesheet" href="/css/stylequemsomos.css">
+    <link rel="icon" href="/Imagens/LOGO.png">
 </head>
 <body>
     <header class="header">
@@ -24,9 +27,9 @@
                 <li><a href="#section-home">Início</a></li>
                 <li><a href="#section-quemsomos">Quem somos</a></li>
                 <li><a href="#Serviços1">Serviços</a></li>
-                <li><a href="/">Portfólio</a></li>
-                <li><a href="/">Depoimentos</a></li>
-                <li><a href="/">Contato</a></li>
+                <li><a href="#port">Portfólio</a></li>
+                <li><a href="#section-depoimentos">Depoimentos</a></li>
+                <li><a href="#conta">Contato</a></li>
                 <div id="divicones">
                 <li class="iconessociais"><a><img src="./Imagens/insta.png"></a></li>
                 <li class="iconessociais"><a><img src="./Imagens/facebook.png"></a></li>
@@ -75,7 +78,7 @@
      <div>
       
         <img  id ="astro" src="./Imagens/astronautaoficial.png"/>
-        <h1 id="h-quemsomos">Quem somos?</h1> 
+        <h1 id="h-quemsomos" class="h1">Quem somos?</h1> 
     
     </div> 
     </section>
@@ -108,9 +111,9 @@ A div envolve o texto e a foto -->
     </section> <!-- Fim Seção Quem Somos-->
     
     <section id="Serviços1"> <!--Seção Serviços-->
-        <div>
-            <img src="Imagens/AstronautaServiço.svg" alt="Icone astronauta"/>
-            <h1>Serviços prestados pela NaveSpace: </h1>
+        <div class="titulos">
+            <img id ="imagemastro" src="Imagens/AstronautaServiço.svg" alt="Icone astronauta"/>
+            <h1 class="h1">Serviços prestados pela NaveSpace: </h1>
         </div>
     </section>
     
@@ -127,7 +130,7 @@ A div envolve o texto e a foto -->
     <!--Começo da seção portfólio-->
     <div class="titulos">
     <img src="/Imagens/icone_maleta.png"/>  
-    <h1>A seguir um pouco do nosso trabalho</h1>
+    <h1 id="port" class="h1">A seguir um pouco do nosso trabalho</h1>
     </div>
     <section id="section-portfolio">
     
@@ -135,19 +138,19 @@ A div envolve o texto e a foto -->
     <div id="div-items">
     <div class="items">
 		<div class="item active">
-			<img src="/Imagens/earth-11008_640.jpg">
+			<img src="/Imagens/quarto.jpg">
 		</div>
 		<div class="item next">
-			<img src="/Imagens/earth-11014_640.jpg">
+			<img src="/Imagens/sala.jpg">
 		</div>
 		<div class="item">
-			<img src="/Imagens/earth-11015_640.jpg">
+			<img src="/Imagens/astronautas_foto.png">
 		</div>
 		<div class="item">
-			<img src="/Imagens/earth-11014_640.jpg">
+			<img src="/Imagens/quarto.jpg">
 		</div>
 		<div class="item prev">
-			<img src="/Imagens/earth-11014_640.jpg">
+			<img src="/Imagens/sala.jpg">
 		</div>
 		<div class="button-container">
 			<div class="button"><i class="fas fa-angle-left"><img src="/Imagens/esquerda.png"> </i></div>
@@ -163,7 +166,7 @@ A div envolve o texto e a foto -->
     <section id="section-depoimentos">
         <div id="div-section-depoimentos">
             <img src="/Imagens/message.png"/>
-            <h1>Depoimentos de clientes: </h1>
+            <h1 class="h1">Depoimentos de clientes: </h1>
         </div>
 
         <div id="div-geral">
@@ -209,10 +212,91 @@ A div envolve o texto e a foto -->
 
     </section>
     <!--Fim da seção depoimentos-->
-    <form>
-        <label for="nome"></label>
-        <input type="text">
-    </form>
+
+    <!--Começo seção contatos-->
+    <section id ="conta" class="Sec1">
+        <div class="Caixa1">
+            <div class="texto1">   
+            <div class="imagemenome">
+                <img src="/Imagens/message.png" />
+                <h1 >Contato</h1>
+            </div>
+                <h4>Email:</h4>
+                <p>loreispum@loreispum.com.br</p>
+                
+                <h4>Telefone:</h4>
+                <p >+55 (84) XXXXX-XXXX </p>
+                
+                <h4>Localização:</h4>
+                <p>
+                    Rua: lore ispum, 600  <br/>
+                    Lore ispum, Natal-RN <br/>
+                    CEP: xxxxx-xxx, Brasil <br/>
+                </p>
+            </div>
+
+            <div id="mapa">
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.1646511087447!2d-35.20763318523281!3d-5.832398695773951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b2ff8566fe1f6f%3A0xd35194a8cdd83856!2sIMD%20-%20Instituto%20Metrop%C3%B3le%20Digital%20-%20Lagoa%20Nova%2C%20Natal%20-%20RN%2C%2059076-560!5e0!3m2!1spt-BR!2sbr!4v1630682018284!5m2!1spt-BR!2sbr" 
+                width="100%" height="45%" style="border:0; border-radius: 2%;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+               
+    </div>
+    </section>
+    
+    <section class="sec2">
+
+        <div id="h1form"><h1> Formulário para contato </h1></div>
+
+            <p class="textoForm">
+                Aqui nos disponibilizamos para tirar qualquer dúvida que você tenha. <br/>
+                Caso tenha alguma sugestão, sinta-se também à vontade para falar conosco.<br/>
+            </p>
+        <form >
+            
+            <div  class="fonte">
+                <label for="nombre">Nome: </label>
+                <div class="form-nome">
+                    <input placeholder="joão da silva" class="form-control" class="nombre" type="text" name="nombre"/>
+                </div>
+            </div>
+            <br/>
+            <div  class="fonte">
+                <label for="nombre">Telefone: </label>
+                    <div class="form-tele">
+                        <input  placeholder="40028922" class="form-control" class="nombre" type="tel" name="nombre"/>
+                    </div>
+            </div>
+            <br/>
+            <div class="fonte">
+                <label for="email">Email:</label>
+                <div class="form-email">
+                <input  placeholder="joão@gmail.com" class="form-control"  id="email" type="email" name="email" />
+            </div>
+            </div>
+            <br/>
+            <div  class="fonte">
+                <label for="message">Mensagem:</label>
+                <div class="form-mensagem">
+                    <textarea placeholder="Todos foram efetivados" class="form-control" id="inputmensagem" ></textarea>
+                </div>
+                
+            </div>
+            
+          </div>
+            <div class="direita">
+                <button type="submit"   class="btn btn-light">Enviar</button>
+            </div>
+           
+        </form>
+    </section>
+
+
+    <!-- Fim seção contatos-->
+    <footer>
+        <p>NaveSpace | Desenvolvido pela EJECT</p>
+            
+    </footer>
+
 <script src="./Js/menuresp.js"></script>
 <script src="./Js/carousel.js"></script>
 

@@ -3,7 +3,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: right;
-    height: 105vh;
+    height: 100vh;
 }
 #section-home{
     margin-bottom:5% ;
@@ -83,7 +83,7 @@
         background:rgba(45, 45, 48, 0.9);
         padding: 10%;
         margin: 10%;
-        width: 60%;
+        /*width: 60%;*/
         
     }
 
