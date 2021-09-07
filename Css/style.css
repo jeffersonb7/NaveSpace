@@ -1,0 +1,570 @@
+body, ul, li{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-family: Roboto;
+}
+.titulos{
+    display: flex; 
+    justify-content: center;
+    align-content: center;
+ }
+ #imagemastro{
+     width: 50px;
+ }
+li{
+    font-size: 1.2rem;
+}
+.h1{
+        color: white;
+        font-size:2.4rem;
+    }
+body{
+    background:black;
+}
+#logo a{
+    font-family: Ubuntu;
+    font-size: 1.5rem;
+    margin-left: 5px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    background: rgba(179, 179, 179, 0.356);
+}
+.header{
+    /*background: #A9A3A3;*/
+    background:rgba(45, 45, 48, 0.9);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.header div{
+    display: flex;
+    align-items: center;
+}
+#menu{
+    display: flex;
+}
+#menu li{
+    margin-left: 10px;
+}
+#menu li a{
+    display: block;
+    padding: 10px;
+}
+#logo img{
+    width: 50px;
+    height: auto;
+}
+
+#botaomobile{
+    display: none;
+}
+.iconessociais{
+    display: none;
+}
+@media (max-width: 830px) {
+    #menu{
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 90px;
+        right: 0px;
+        /*background:#A9A3A3;*/
+        background:rgba(45, 45, 48, 0.9);
+        height: 0vh;
+        transition: .7s;
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+    #logo a{
+        visibility: hidden;
+    }
+    #nav.active #menu{
+        height: 70vh;
+        visibility: visible;
+        overflow-y: auto;
+    }
+    #menu li a{
+        padding: 1rem 30%;
+        text-align: center;
+    }
+    #botaomobile{
+        display: flex;
+        padding: .5rem 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        color: white;
+    }
+    #iconemenu{
+        width: 20px;
+        border-top: 2px solid;
+        display: block;
+    }
+    #iconemenu::after, #iconemenu::before {
+        content: '';
+        margin-top: 5px;
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        transition: .3s;
+        position: relative;
+    }
+    #nav.active #iconemenu{
+        border-top-color: transparent;
+    }
+    #nav.active #iconemenu::before{
+        transform: rotate(135deg);
+    }
+    #nav.active #iconemenu::after{
+        transform: rotate(-135deg);
+        top: -7px
+    }
+    .iconessociais{
+        display: flex;
+        visibility: visible;
+        display: flex;
+        padding: 0px;
+    }
+    #menu .iconessociais{
+        justify-content: space-between;
+    }
+    #menu .iconessociais a{
+        padding: 20px;
+    }
+    #menu .iconessociais a img{
+        width: 30px;
+        height: auto;
+    }
+    #divicones{
+        display: flex;
+        justify-content: center;
+    }
+    
+}
+#section-quemsomos{
+    text-align: center;
+    font: size 14px;
+    font-family:Ubuntu;
+}
+#PredioEtexto > div{
+    display: flex;
+}
+#astro{
+    height: 150px;
+    border-radius: 50% ;   
+    margin-left: auto;
+    margin-right: auto;
+    width:auto;
+    
+}
+#fotopredio{
+    width: 100%;
+    min-height: 480px;
+}
+p{
+    height: auto;
+    border-radius: 1%;
+    color: white;
+    text-align: justify;
+     /*font-size: 24px;*/   
+     font-family:  Ubuntu;
+     /*padding: 3rem;*/
+}
+#div-predioEtexto-text{
+    width: 50%;
+}
+#div-predioEtexto-img{
+    width: 50%;
+}
+#div-predioEtexto-contenner{
+   
+    margin-left: 13rem;
+    margin-right: 13rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    max-height: 20%;
+}
+#div-predioEtexto-text{
+    background: #2D2D30;;
+}
+#div-predioEtexto-text{
+    margin-right: 2%;
+}
+#div-predioEtexto-img{
+    margin-left: 2%;
+}
+
+/*Responsividade Quem somos*/
+@media(max-width: 830px){
+    
+    #div-predioEtexto-text{
+        width: auto;
+    }
+    #div-predioEtexto-contenner{
+        margin: 5%;
+        max-height: 20%;
+    }
+    #div-predioEtexto-img{
+        width: 0%;
+        height: 0%;
+    }
+    #div-predioEtexto-text{
+        margin-right: 2%;
+    }
+
+}
+/*Fim Responsividade Quem somos*/
+
+
+.ListaS{
+   color: white;
+   padding-left: 40px;
+   text-align: left;
+    margin-top: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 5%;
+    background-color: #2D2D30;
+    border-radius: 10px;
+    height: 380px;
+    width: auto;
+}
+.ListaS1{
+    margin-top: 10px;
+    list-style-type: circle;
+    font-size: 36px;
+    padding-top: 25px;
+}
+/*Responsividade Serviços*/
+@media(max-width: 830px){
+    #Serviços1>div{
+        color: white;
+        text-align: center;
+        justify-content: center;
+        margin-top: 100px;
+        display: block;
+        font-size: 1.6rem;
+        font-family: Ubuntu;
+        
+    }
+    .ListaS{
+        color: white;
+        padding-left: 40px;
+        text-align: left;
+         margin-top: 20px;
+         margin-left: 10%;
+         background-color: #2D2D30;
+         border-radius: 5%;
+         width: auto;
+         justify-content: center;
+         
+     }
+}
+/*Fim Teste*/
+
+/*Seção contatos */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+.color{
+    background-color: #2D2D30;
+    
+}
+.topo{
+    
+    padding-top:10vh ;
+    padding-left: 5% ;
+    font-size: 30px;;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+}
+
+.Sec1{
+    color: white;
+
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    padding-bottom: 5%;
+    margin-left: 20%;
+    margin-top: 5%;
+
+}
+#mapa{
+    justify-content: baseline;
+}
+.texto1 p{
+    padding-top:3%;
+    padding-bottom: 3%; 
+}
+.texto1 h4{
+    margin-top: 3%;
+}
+h4{
+    font-size: 24px;
+    color: white;
+}
+
+form{
+    padding-top: 1%;
+    padding-bottom: 6%;
+    
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 15%;
+    border-radius: 10px;
+    /*background-color: #2D2D30;*/
+}
+
+.textoForm{
+    color: #F5F5F5;
+    text-align: center;
+    font-size: 18px;
+    padding-left: 9%;
+    padding-right: 9%;
+    padding-top: 4%;
+}
+
+.button{
+	width:100px;
+	height:40px;
+	border-radius: 10px;
+}
+
+.direita{
+    padding-left: 90%;
+    color: #F5F5F5;
+    background-color: none;
+}
+
+.fonte{
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, 'Ubuntu', Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;    color: #F5F5F5;
+    background-color: none;
+}
+
+.tituloForm{
+    color:#F5F5F5
+}
+
+.Caixa1 {
+   display: flex;
+   justify-content: baseline;
+
+   padding-top: 2px;
+   
+}
+
+.map {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+     filter: grayscale(100%);
+}
+
+
+.sec2{
+    background: #2D2D30;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-top: 2%;
+    border-radius: 10px;
+}
+/*Fim Seção contatos */
+/*Responsividade Contatos*/
+@media (max-width: 830px){
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+    }
+    #h1form h1{
+        margin: 5%;
+    }
+    .Caixa1{
+        display: block;
+    }
+    .imagemenome{
+        text-align: center;
+        justify-content: center;
+        align-content: center;
+        display: block;
+    }
+    #mapa{
+        display: block;
+    }
+    .textoForm p{
+        padding-left:4% ;
+        padding-right:4% ;
+    }
+    
+    .color{
+        background-color: #2D2D30;
+        size: 20px;
+    }
+    body {
+        font-family: 'Lato', sans-serif;
+        /*background-color: #252528;*/
+    }
+    .topo{
+        
+        padding-top:5% ;
+        padding-left: 5% ;
+        font-size: 30px;;
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, 'Ubuntu', Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;        color: white;
+    }
+    
+    .Sec1{
+        color: white;
+    
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, 'Ubuntu', Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: white;
+        padding-bottom: 1%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 1%;
+    
+    }
+    .textoForm{
+        text-align: justify;
+    }
+    .sec2{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    h4{
+        margin-right: 10%;
+        margin-top: 5%;
+        font-size: 24px;
+        color: rgb(209, 201, 201);
+    }
+    
+    form{
+        padding-top: 2vh;
+        padding-bottom: 12vh;
+        
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 15%;
+        border-radius: 10px;
+        background-color: #2D2D30;
+    }
+    
+    .textoForm{
+        background: none;
+        color: #F5F5F5;
+
+    }
+    
+    .button{
+        
+        width:150px;
+        height: 70px;
+        border-radius: 10px;
+    }
+    
+    .direita{
+        padding-left: 88%;
+        color: #f3f3f3;
+    }
+    
+    #fonte{
+        font-family: Ubuntu,sans-serif;
+        color: #ffffff;
+        
+    }
+    
+    .tituloForm{
+        color:#ffffff
+    }
+    
+    .Caixa1 {
+        justify-content: space-between;
+       padding-top: 2px;
+       padding-bottom: 2%;
+    }
+    #mapa{
+        justify-content: center;
+    }
+    .map {
+        -webkit-filter: grayscale(100%);
+        -moz-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+        -o-filter: grayscale(100%);
+         filter: grayscale(100%);
+
+    }
+}
+/*Fim da responsividade Contatos*/
+
+.form-control{
+    background: none;
+    border: none;
+    border-radius: 0px;
+    color: white;
+}
+.form-nome{
+    border-radius: 0px;
+}
+.form-tele{
+    border-radius: 0px;
+}
+.form-email{
+    border-radius: 0px;
+}
+.form-mensagem{
+    border-radius: 0px;
+}
+.btn{
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+
+    padding-left: 40px;
+    padding-right: 40px;
+    color: white;
+    margin-top: 3%;
+
+}
+.direita{
+    padding: 0%;
+    display: block;
+    justify-content: right;
+    
+    text-align: right;
+}
+footer{
+    display: block;
+    align-content: center;
+    text-align: center;
+    background-color: #2D2D30;
+}
+
+footer p{
+    text-align: center;
+    margin: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#h1form{
+    align-content: center;
+    text-align: center;
+}
+.sec2 h1{
+    color: white;
+}

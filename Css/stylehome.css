@@ -1,0 +1,159 @@
+#section-home{
+    background-image: url(../Imagens/Moon.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    height: 100vh;
+}
+#section-home{
+    margin-bottom:5% ;
+}
+
+#div-section-home h1{
+    color: white;
+    margin: 0px;
+    padding: 0%;
+    font-size: 36px;
+    margin-bottom: 20px;
+    margin-left:10px;
+}
+#div-section-home p{
+    margin: 0%;
+    padding: 0%;
+    background: none;
+    border-radius: 0%;
+    font-size: 24px;
+    margin-left: 20px;
+    width: 100%;
+}
+#div-conteudo{
+    /*padding-top: 13%;
+    padding-left: 6%; */
+    background:rgba(45, 45, 48, 0.5);
+    padding-left: 3%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: flex;
+
+}
+#flex{
+    width: 50%;
+}
+#flex2{
+    width: 50%;
+}
+#div-button{
+    margin-top: 30px;
+    display: block;
+}
+.botao{
+    font-family: ubuntu;
+    border-radius: 20px;
+    background: #464648;
+    text-align: center;
+    width: 13rem;
+    color: white;
+    border-style: none;
+    height: 3rem;
+    font-size: 20px;
+    display: block;
+    float: right;
+}
+#redessociais{
+    display: block;
+    height: 100px;
+    margin-top: 4rem;
+    padding-left: 3rem;
+  margin-left: 4%;
+}
+#redessociais img{
+    margin:10px;
+    width: 30px;
+}
+.espaco{
+    padding: 5%;
+}
+
+
+
+@media (max-width:830px){
+    #div-section-home > div {
+        text-align: center;
+        margin-top: 10px;
+        background:rgba(45, 45, 48, 0.9);
+        padding: 10%;
+        margin: 10%;
+        /*width: 60%;*/
+        
+    }
+
+    #section-home{
+        background: black;
+        height: 70%;
+       
+    }
+    #div-section-home p{
+        margin: 0px;
+        padding: 10px;
+    }
+    #div-section-home h1{
+        margin: 0px;
+        padding-bottom: 5%;
+        padding: 10px;
+        font-size: 24px;
+    }
+    #div-button{
+        text-align: center;
+        margin-top: 10%;
+        margin-right: 0%;
+    }
+    .botao{
+        float: none;
+    }
+    #div-section-home p{
+        font-size: 18px;
+    }
+    .botao{
+        width: 11rem;
+        display: inline-block;
+    }
+    #redessociais{
+        display: none;
+    }
+    
+    .espaco{
+        display: none;
+    }
+    #div-conteudo{
+        display: block;
+    }
+    #flex{
+        display: block;
+        width: 100%;
+    }
+    #flex2{
+        display: none;
+    }
+}
+
+/*popup css*/
+
+.popup .overlay{
+    position: fixed;
+    top:0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vw;
+    background:rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+.popup .content{
+    position:absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background:#fff;
+    width: 450px;
+    
+
+}

@@ -1,0 +1,129 @@
+#div-section-depoimentos{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+#div-geral{
+    display: block;
+    margin-top: 5%;
+}
+
+.div-fotonome{
+    justify-content: center;
+    margin: 0px;
+
+}
+.div-fotonome p{
+    color: white;
+    padding: 0%;
+    margin: 0%;
+}
+.div-fotonome{
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+.div-texto p{
+    padding: 0%;
+    margin: 0%;
+    font-size: 20px;
+}
+.div-modulo{    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #363644;
+    margin-bottom: 3%;
+    border-radius: 20px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+    
+}
+
+#div-geral{
+    justify-content: center;
+}
+.div-imagem{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    background: #2B3149;
+    border-radius: 100px;
+}
+.div-imagem img{
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+    margin-right: 0px;
+    width: 50px;
+    justify-content: center;
+    
+}
+.div-texto{
+    width: 50%;
+    margin-left:10%;
+}
+.div-text p{
+    display: block;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+}
+.div-fotonome p{
+    font-size: 80%;
+    margin-top: 5px;
+    display: block;
+    text-align: justify;
+}
+@media(max-width:830px){
+    .div-modulo{
+        display:block;
+        margin-left: 15%;
+        margin-right: 15%;
+        border-radius: 50px;
+        margin-bottom: 10%;
+        padding: 5%;
+    }
+    .div-fotonome{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    .div-fotonome p{
+        text-align: center;
+    }
+    .div-texto p{
+        padding: 10%;
+        font-size: 18px;
+    }
+    .div-fotonome h1{
+        text-align: center;
+    }
+    .div-texto {
+        width: 100%;
+        margin-left: 0px;
+
+    }
+    .div-fotonome img{
+        justify-content: center;
+    }
+    #div-section-depoimentos{
+        display: block;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    #div-section-depoimentos h1{
+        text-align: center;
+        
+    }
+    .div-fotonome{
+        align-content: center;
+    }
+}
