@@ -6,3 +6,6 @@ class Contato(models.Model):
     telefone = models.CharField(max_length=11)
     email = models.EmailField(max_length=254)
     mensagem = models.TextField()
+
+class Servico(models.Model):
+    nome_servico = models.CharField(max_length=100)

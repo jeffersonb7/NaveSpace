@@ -124,6 +124,9 @@ A div envolve o texto e a foto -->
                 <li class="ListaS1"> Tematização de festas </li>
                 <li class="ListaS1"> Artigos gerais </li>
                 <li class="ListaS1"> Personalização de artigo </li>
+                {% for servico in servicos %}
+                    <li class="ListaS1">{{ servico.nome_servico }}</li>
+                {% endfor %}
            </ul>
         </div>
     </section> <!--Fim Seção Serviços-->
