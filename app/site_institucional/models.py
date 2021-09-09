@@ -5,4 +5,4 @@ class Contato(models.Model):
     nome = models.CharField(max_length=100)
     telefone = models.CharField(max_length=11)
     email = models.EmailField(max_length=254)
-    text = models.TextField()
+    mensagem = models.TextField()
