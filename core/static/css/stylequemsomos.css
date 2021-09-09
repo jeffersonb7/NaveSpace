@@ -2,3 +2,21 @@
     padding: 1rem;
     font-size: 20px;
 }
+@media(max-width: 830px){
+    
+    #div-predioEtexto-text{
+        width: auto;
+    }
+    #div-predioEtexto-contenner{
+        margin: 5%;
+        max-height: 20%;
+    }
+    #div-predioEtexto-img{
+        width: 0%;
+        height: 0%;
+    }
+    #div-predioEtexto-text{
+        margin-right: 2%;
+    }
+
+}
