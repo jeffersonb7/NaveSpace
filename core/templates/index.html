@@ -41,26 +41,35 @@
     </header>
 
     
-<!--Começo da seção home-->
-
+    <!--Começo da seção home-->
     <section id="section-home">
         <div id="div-section-home">
             <div class="espaco"></div>
             <div id="div-conteudo">
-              <div id="flex">
-                <h1>Que tal conhecer um pouco da NaveSpace?</h1>
+                
+                <div id="flex">
+                {% if not home %}
+                
+                    <h1>Que tal conhecer um pouco da NaveSpace?</h1>
+                        
                     <p>A NaveSpace é  uma loja de
-                    artigos temáticos sobre o espaço, 
-                    nosso objetivo é tematizar seu ambiente 
-                    e te deixar o mais perto da lua possível!<br>
-                    Para conferir os produtos que temos disponível
-                    em estoque, basta clicar no botão abaixo, ou se
-                    quiser pode continuar navegando e conhecendo 
-                    um pouco mais sobre a empresa.</p>
-                    <div id="div-button">
+                        artigos temáticos sobre o espaço, 
+                        nosso objetivo é tematizar seu ambiente 
+                        e te deixar o mais perto da lua possível!<br>
+                        Para conferir os produtos que temos disponível
+                        em estoque, basta clicar no botão abaixo, ou se
+                        quiser pode continuar navegando e conhecendo 
+                        um pouco mais sobre a empresa.</p>
+                {% else %}
+                    <h1>{{ home.titulo }}</h1>
+                    <p>{{ home.descricao }}</p>
+                {% endif %}
+
+                <div id="div-button">
                     <a><button class="botao"  onclick="togglePopup()" id="construcao">Loja NaveSpace</button></a>
                     </div>  
                 </div>
+
                 <div id="flex2"></div> 
             </div>
             <div id="redessociais">
@@ -87,26 +96,36 @@
     <section id="PredioEtexto">  
 <!-- Criei essa div para habilitar o display flex
 A div envolve o texto e a foto -->
-    
-       <div id="div-predioEtexto-contenner">
+        <div id="div-predioEtexto-contenner">        
             
-            <div id="div-predioEtexto-text">
-            <p>
-               <b> Fundada em setembro de 2021 por Apollo Júnior </b>
-            <br>
-            <br>
-                A NaveSpace é uma empresa que vai te levar a perceber a infinidade do espaço e a possibilidade de conhecer um pouco mais dele através de nossos produtos.
-            <br>
-            <br>
-                A ideia da empresa nasceu do jovem empreendedor Apollo Júnior, que aos seus 19 anos teve a ideia de criar uma empresa focada em artigos de temática espacial. 
                 
-            </p>
-            </div>
-
-            <div id="div-predioEtexto-img">
-        
-            <img id="fotopredio" src="{% static 'Imagens/a-tall-building-reflects-the-sunlight.jpg' %}"/> 
-            </div>
+                <div id="div-predioEtexto-text">
+                    {% if sobre %}
+                    <p><b>{{ sobre.titulo }}</b></p>
+                    <p>{{ sobre.descricao }}</p>
+                    {% else  %}
+                    <p>
+                    <b> Fundada em setembro de 2021 por Apollo Júnior </b>
+                    <br>
+                    <br>
+                    A NaveSpace é uma empresa que vai te levar a perceber a infinidade do espaço e a possibilidade de conhecer um pouco mais dele através de nossos produtos.
+                    <br>
+                    <br>
+                    A ideia da empresa nasceu do jovem empreendedor Apollo Júnior, que aos seus 19 anos teve a ideia de criar uma empresa focada em artigos de temática espacial. 
+                    </p>        
+                    {% endif %}
+                </div>
+                
+                {% if sobre.img %}
+                <div id="div-predioEtexto-img">    
+                    <img id="fotopredio" src="{{ sobre.img.url }}"/> 
+                </div>
+                {% else %}
+                <div id="div-predioEtexto-img">    
+                    <img id="fotopredio" src="{% static 'Imagens/a-tall-building-reflects-the-sunlight.jpg' %}"/> 
+                </div>
+                {% endif %}
+            
         </div>
     
     </section> <!-- Fim Seção Quem Somos-->
@@ -121,12 +140,15 @@ A div envolve o texto e a foto -->
     <section ><!--id="Serviços2"*/-->
         <div>
             <ul class="ListaS">
-                <li class="ListaS1"> Tematização de festas </li>
-                <li class="ListaS1"> Artigos gerais </li>
-                <li class="ListaS1"> Personalização de artigo </li>
-                {% for servico in servicos %}
-                    <li class="ListaS1">{{ servico.nome_servico }}</li>
-                {% endfor %}
+                {% if servicos %}
+                    {% for servico in servicos %}
+                        <li class="ListaS1">{{ servico.nome_servico }}</li>
+                    {% endfor %}
+                {% else %}
+                    <li class="ListaS1"> Tematização de festas </li>
+                    <li class="ListaS1"> Artigos gerais </li>
+                    <li class="ListaS1"> Personalização de artigo </li>
+                {% endif %}
            </ul>
         </div>
     </section> <!--Fim Seção Serviços-->
@@ -174,46 +196,63 @@ A div envolve o texto e a foto -->
         </div>
 
         <div id="div-geral">
+            {% if depoimentos %}
+                {% for depoimento in depoimentos %}
             <div class="div-modulo">
-                <div class="div-fotonome"> 
-                    <img src="{% static '/Imagens/usuario.png' %}"/>
-                    <p>Candido Portinari</p>
+                <div class="div-fotonome">
+                    {% if depoimento.img %}
+                        <img src="{{ depoimento.img.url }}"/>
+                    {% else %}
+                        <img src="{% static 'Imagens/usuario.png' %}"/>
+                    {% endif %}
+                    <p>{{ depoimento.nome }}</p>
                 </div>
                 <div class="div-texto">
                     <p> 
-                        Em geral os produtos são de qualidade, super detalhados e com uma durabilidade extraordinária.
+                        {{ depoimento.mensagem }}
                     </p>
                 </div>
             </div>
-
-            <div class="div-modulo">
-                <div class="div-fotonome">
-                    <img src="{% static '/Imagens/usuario.png' %}"/> 
-                    <p>Tarsila do Amaral</p>
+                {% endfor %}
+            {% else %}
+                <div class="div-modulo">
+                    <div class="div-fotonome"> 
+                        <img src="{% static '/Imagens/usuario.png' %}"/>
+                        <p>Candido Portinari</p>
+                    </div>
+                    <div class="div-texto">
+                        <p> 
+                            Em geral os produtos são de qualidade, super detalhados e com uma durabilidade extraordinária.
+                        </p>
+                    </div>
                 </div>
-                <div class="div-texto">
-                    <p>
-                        Abaporu chorou com tamanha perfeição
-                    </p>
+
+                <div class="div-modulo">
+                    <div class="div-fotonome">
+                        <img src="{% static '/Imagens/usuario.png' %}"/> 
+                        <p>Tarsila do Amaral</p>
+                    </div>
+                    <div class="div-texto">
+                        <p>
+                            Abaporu chorou com tamanha perfeição
+                        </p>
+                    </div>
                 </div>
-            </div>
 
 
-            <div class="div-modulo">
-                <div class="div-fotonome">
-                    <img src="{% static '/Imagens/usuario.png' %}"/>
-                    <p>Anita Malfatti</p>
+                <div class="div-modulo">
+                    <div class="div-fotonome">
+                        <img src="{% static '/Imagens/usuario.png' %}"/>
+                        <p>Anita Malfatti</p>
+                    </div>
+                    <div class="div-texto">
+                        <p>
+                            Produtos de muita qualidade.
+                        </p>
+                    </div>
                 </div>
-                <div class="div-texto">
-                    <p>
-                        Produtos de muita qualidade.
-                    </p>
-                </div>
-            </div>
-
-
+            {% endif %}
         </div>
-
     </section>
     <!--Fim da seção depoimentos-->
 
@@ -221,10 +260,25 @@ A div envolve o texto e a foto -->
     <section id ="conta" class="Sec1">
         <div class="Caixa1">
             <div class="texto1">   
-            <div class="imagemenome">
-                <img src="{% static '/Imagens/message.png' %}" />
-                <h1 >Contato</h1>
-            </div>
+                <div class="imagemenome">
+                    <img src="{% static '/Imagens/message.png' %}" />
+                    <h1 >Contato</h1>
+                </div>
+
+                {% if endereco %}
+                <h4>Email:</h4>
+                <p>{{ endereco.email }}</p>
+                
+                <h4>Telefone:</h4>
+                <p>{{ endereco.telefone }}</p>
+                
+                <h4>Localização:</h4>
+                <p>
+                    Rua: {{ endereco.rua }}, {{ endereco.numero }}  <br/>
+                    {{ endereco.bairro }}, {{ endereco.cidade }} <br/>
+                    CEP: {{ endereco.cep }}, Brasil <br/>
+                </p>
+                {% else %}
                 <h4>Email:</h4>
                 <p>loreispum@loreispum.com.br</p>
                 
@@ -237,21 +291,21 @@ A div envolve o texto e a foto -->
                     Lore ispum, Natal-RN <br/>
                     CEP: xxxxx-xxx, Brasil <br/>
                 </p>
+                {% endif %}
             </div>
 
             <div id="mapa">
                 <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.1646511087447!2d-35.20763318523281!3d-5.832398695773951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b2ff8566fe1f6f%3A0xd35194a8cdd83856!2sIMD%20-%20Instituto%20Metrop%C3%B3le%20Digital%20-%20Lagoa%20Nova%2C%20Natal%20-%20RN%2C%2059076-560!5e0!3m2!1spt-BR!2sbr!4v1630682018284!5m2!1spt-BR!2sbr" 
                 width="100%" height="45%" style="border:0; border-radius: 2%;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-               
-    </div>
+            </div>            
+        </div>
     </section>
     
     <section class="sec2">
         <div id="h1form">
             <h1> Formulário para contato </h1>
         </div>
-        <p class="textoForm"> {% csrf_token %}
+        <p class="textoForm">
             Aqui nos disponibilizamos para tirar qualquer dúvida que você tenha. <br/>
             Caso tenha alguma sugestão, sinta-se também à vontade para falar conosco.<br/>
         </p>
@@ -275,7 +329,13 @@ A div envolve o texto e a foto -->
                     <div class="form-tele">
                         <input  placeholder="40028922" class="form-control" class="nombre" type="tel" name="telefone"/>
                     </div>
-                    
+                    {% if form.telefone.errors %}
+                    <ol>
+                    {% for error in form.telefone.errors %}
+                        <li><strong>{{ error|escape }}</strong></li>
+                    {% endfor %}
+                    </ol>
+                {% endif %}
             </div>
             <br/>
             <div class="fonte">
@@ -317,12 +377,10 @@ A div envolve o texto e a foto -->
 
     <!-- Fim seção contatos-->
     <footer>
-        <p>NaveSpace | Desenvolvido pela EJECT</p>
-            
+        <p>NaveSpace | Desenvolvido pela EJECT</p>         
     </footer>
 
-<script src="{% static './Js/menuresp.js' %}"></script>
-<script src="{% static './Js/carousel.js' %}"></script>
-
+    <script src="{% static './Js/menuresp.js' %}"></script>
+    <script src="{% static './Js/carousel.js' %}"></script>
 </body>
 </html>
